@@ -44,6 +44,7 @@ export default function NavBar({setStickyPage}) {
                         <li className="nav-item"><a className="nav-anchor" href="#about" onClick={handleRedirect}>About</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#" onClick={handleRedirect}>Skills</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#" onClick={handleRedirect}>Projects</a></li>
+                        <li className="nav-item"><a className="nav-anchor"></a></li>
                     </ul>
                 </nav>
                 <div className='behind-white-line'>

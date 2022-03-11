@@ -185,6 +185,7 @@ nav{
         clip-path: circle(1500px at 90% -15%);
         -webkit-clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
+        
     }
 
     .logo{
