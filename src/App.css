@@ -28,6 +28,9 @@
     --nav-color: var(--color-dark-brown);
 
     --nav-font-color: #fff;
+
+    --font-size-desktop: 16px;
+    --font-size-mobile: 16px;
     --primary-font-color: #fff;
     --primary-font: 'Poppins', sans-serif;
 }
@@ -253,16 +256,112 @@ nav{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     flex-flow: row wrap;
     background-image: linear-gradient(to bottom, var(--gradient-most-blue-to-brown));
     color: var(--primary-font-color);
 }
 
+.about-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
 .about-text{
     max-width: 400px;
+
+    text-align: start;
 }
+
+.social-links{
+    color: var(--color-dark-blue);
+    font-size: 50px;
+    margin: 10px;
+}
+
+.download-btn{
+    border: none;
+    max-width: 150px;
+    padding: 10px;
+    box-shadow: black 0 0 5px;
+    font-weight: bold;
+    background: var(--color-dark-blue);
+    color: var(--primary-font-color);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.download-icon{
+    margin-right: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .about-text{
+        max-width: 300px;
+    }
+}
+
+@media (max-height: 657px) {
+    .about-section{
+        font-size: 15px;
+    }
+}
+
+
+/* Skills section */
+.skills-section{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-flow: row wrap;
+    background-image: linear-gradient(to top, var(--gradient-most-blue-to-brown));
+    color: var(--primary-font-color);
+}
+
+.skills-container{
+    height: 20%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skills-item{
+    transition: all .3s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    flex: 0 0 33.333333%;
+}
+
+.skills-item:hover {
+    font-size: 20px;
+}
+
+.hidden-skill{
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+.highlight-skill{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom:10%;
+    display: block;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
 
 
 /* Media queries */

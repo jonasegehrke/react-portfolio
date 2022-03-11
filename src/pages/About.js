@@ -1,5 +1,6 @@
 import React from 'react'
-import { BsGithub, BsFacebook, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsFillCloudDownloadFill } from 'react-icons/bs';
+import { IconContext } from "react-icons";
 
 
 export default function About() {
@@ -7,8 +8,24 @@ export default function About() {
         <div>
             <section className="about-section" id="about">
                 <div className="about-container">
+                    <div className='spacer'></div>
+                <div>
+                        <div className="about-links">
+                            <a className="social-links" href="https://github.com/jonasegehrke"><BsGithub /></a>
+                            <a className="social-links" href="https://www.linkedin.com/in/jonas-emil-gehrke/"><BsLinkedin /></a>
+                        </div>
+                        <div className="about-download">
+                            <a href="https://drive.google.com/file/d/1lJsX8FtAoITbxp4ayR99ltp02RNXcoqK/view?usp=sharing">
+                                <button className="download-btn btn">
+                                    <IconContext.Provider value={{ className: "download-icon" }}>
+                                        <BsFillCloudDownloadFill />
+                                    </IconContext.Provider>
+                                    Download CV
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                     <div className="about-text">
-                        <h3>About me</h3>
                         <p>
                             My name is Jonas Emil Gehrke and I am currently located in Copenhagen.
                             I'm a hard worker with a goal of becoming better and thus gaining new skills at my workplace.
@@ -21,16 +38,8 @@ export default function About() {
                             I have knowledge about Linux, Azure, Tomcat and much more.
                         </p>
                     </div>
-                    <div>
-                        <div className="about-links">
-                            <a className="social-links" href="https://github.com/jonasegehrke"><BsGithub /></a>
-                            <a className="social-links" href="https://www.linkedin.com/in/jonas-emil-gehrke/"><BsLinkedin /></a>
-                            <a className="social-links" href="https://www.facebook.com/jonas.gehrke/"><BsFacebook /></a>
-                        </div>
-                        <div className="about-download">
-                            <a href="https://drive.google.com/file/d/1lJsX8FtAoITbxp4ayR99ltp02RNXcoqK/view?usp=sharing"><button class="download_cv_btn uil uil-file-search-alt"> CV</button></a>
-                        </div>
-                    </div>
+                    <div className='spacer'></div>
+                    
                 </div>
             </section>
         </div>

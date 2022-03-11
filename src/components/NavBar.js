@@ -13,7 +13,7 @@ export default function NavBar({setStickyPage}) {
         menuButtonRef.current.classList.toggle('open');
         navLinksRef.current.classList.toggle('open');
         setStickyPage()
-        setIsBigScreen(false)
+        setIsBigScreen(false) 
     }
 
     function handleRedirect(){
@@ -42,7 +42,7 @@ export default function NavBar({setStickyPage}) {
                     <ul className="nav_links" ref={navLinksRef}>
                         <li className="nav-item"><a className="nav-anchor" href="#home" onClick={handleRedirect}>Home</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#about" onClick={handleRedirect}>About</a></li>
-                        <li className="nav-item"><a className="nav-anchor" href="#" onClick={handleRedirect}>Skills</a></li>
+                        <li className="nav-item"><a className="nav-anchor" href="#skills" onClick={handleRedirect}>Skills</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#" onClick={handleRedirect}>Projects</a></li>
                         <li className="nav-item"><a className="nav-anchor"></a></li>
                     </ul>

@@ -10,7 +10,7 @@ export default function Blob() {
                         d="M391,352Q313,464,184.5,418.5Q56,373,60,242.5Q64,112,189,62.5Q314,13,391.5,126.5Q469,240,391,352Z" />
                 </clipPath>
             </defs>
-            <image x="0" y="0" width="100%" height="100%" clip-path="url(#blob)"
+            <image x="0" y="0" width="100%" height="100%" clipPath="url(#blob)"
                 xlinkHref={'/images/profile.jpg'} preserveAspectRatio="xMidYMid slice"></image>
         </svg>
 

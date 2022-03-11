@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Brief';
 import About from './pages/About';
 import { useRef } from 'react';
+import Skills from './pages/Skills';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <NavBar setStickyPage={setStickyPage}/>
       <Home/>
       <About/>
+      <Skills/>
     </div>
   );
 }

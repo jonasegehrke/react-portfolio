@@ -12,7 +12,7 @@ export default function Brief() {
             <div className="brief-text">
                 <h1>Hi, I'm Jonas</h1>
                 <h2>Computer Science Student</h2>
-                <p>Hardware and software enthusiast, with flair for agile development and web services</p>
+                <p>Software developer with a passion for agile development and web services</p>
             </div>
         </section>
     </div>
