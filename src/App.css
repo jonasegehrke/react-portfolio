@@ -103,7 +103,7 @@ body{
 
 }
 
-.line {
+.dot {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -126,13 +126,13 @@ body{
     }
   }
 
-  .load-text .line:nth-last-child(1) {
+  .load-text .dot:nth-last-child(1) {
     animation: loadingC 1s 0.1s linear infinite;
   }
-  .load-text .line:nth-last-child(2) {
+  .load-text .dot:nth-last-child(2) {
     animation: loadingC 1s 0.3s linear infinite;
   }
-  .load-text .line:nth-last-child(3) {
+  .load-text .dot:nth-last-child(3) {
     animation: loadingC 1s 0.5s linear infinite;
   }
 

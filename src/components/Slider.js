@@ -34,9 +34,9 @@ export default function Slider() {
     return (
         <div className='greeting-slider'>
             <span ref={loadTextRef} className='load-text'>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </span>
             <span ref={loadDoneRef} className='load-done hide'>&#123;&#10004;&#125;</span>
         </div>
