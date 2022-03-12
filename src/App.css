@@ -24,7 +24,7 @@
 
 :root{
     --background-color:#212121!important;
-    --nav-color: rgba(33,33,33,.7);
+    --nav-color: rgba(33, 33, 33, 0.7);
     --color-neon-green:#0fb;
 
 
@@ -80,6 +80,120 @@ body{
     height: 0.2rem;
     border-radius: 25px;
 }
+
+
+/* Slider */
+
+.greeting-slider{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+    z-index:100;
+    animation: slideOut 4s;
+
+}
+
+.load-done-icon{
+    color: var(--color-neon-green);
+    font-size: 20px;
+
+}
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: var(--color-neon-green);
+    margin: 5px;
+    box-shadow: var(--color-neon-green) 0 0 5px;
+    
+  }
+
+  @keyframes loadingC {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .load-text .line:nth-last-child(1) {
+    animation: loadingC 1s 0.1s linear infinite;
+  }
+  .load-text .line:nth-last-child(2) {
+    animation: loadingC 1s 0.3s linear infinite;
+  }
+  .load-text .line:nth-last-child(3) {
+    animation: loadingC 1s 0.5s linear infinite;
+  }
+
+  
+
+.load-done{
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--color-neon-green);
+    text-shadow: var(--color-neon-green) 0 0 5px;
+    top: 60%;
+    animation: fadeIn 1s;
+}
+
+.load-text.fading, .load-done.fading{
+    animation: fadeOut 0.5s;
+}
+
+.load-text.hide, .load-done.hide{
+    display: none;
+}
+
+
+@keyframes slideOut {
+    0%{width: 100%;}
+    90%{width: 100%;}
+    100%{
+        width: 0%;
+    }
+    
+}
+
+@keyframes slideUp {
+    0%{height: 100vh;}
+    90%{height: 100vh;}
+    100%{
+        height: 0%;
+    }
+    
+}
+
+@media (max-width: 767.98px) {
+    .greeting-slider{
+        
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+ 
+        width: 100%;
+        height: 0;
+        background-color: black;
+        z-index:100;
+        animation: slideUp 4s;
+    
+    }
+}
+
 
 /* NavBar */
 
@@ -333,7 +447,7 @@ nav{
     max-width: 150px;
     padding: 7px;
     box-shadow: var(--color-neon-green) 0 0 2px;
-    border: solid #0fb 2px;
+    border: solid var(--color-neon-green) 2px;
     background: var(--background-color);
     border-radius: 5px;
     font-weight: bold;
@@ -346,6 +460,7 @@ nav{
 .download-btn:hover{
     background: var(--color-neon-green);
     color: black;
+    box-shadow: var(--color-neon-green) 0 0 7px;
 }
 
 .download-icon{
@@ -372,12 +487,11 @@ nav{
 /* Skills section */
 .skills-section{
     position: relative;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    
     color: var(--primary-font-color);
 }
 
@@ -387,20 +501,27 @@ nav{
     max-width: 100%;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .skills-item{
     transition: all .3s ease-in-out;
-    width: 100%;
     cursor: pointer;
     position: relative;
-    flex: 0 0 33.333333%;
+    flex: 0 0 20%;
+    margin: 0 5px;
+    box-shadow: var(--color-neon-green) 0 0 2px;
+    border: solid var(--color-neon-green) 2px;
+    border-radius: 5px;
+
 }
 
 .skills-item:hover {
     font-size: 20px;
     color: var(--color-neon-green);
+    background: var(--color-neon-green);
+    box-shadow: var(--color-neon-green) 0 0 7px;
+    color: black;
 }
 
 .hidden-skill{
@@ -422,12 +543,31 @@ nav{
     100% {opacity:1;}
   }
 
+  @keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;}
+  }
+
 @media (max-width: 767.98px) {
     .highlight-skill{
         max-width: 100%;
     }
     .skills-section{
         align-items: start;
+    }
+
+    .skills-item{
+        flex: 0 0 45%;
+        margin: 0;
+        margin-top: 7px;
+    }
+
+    .skills-item:hover{
+        font-size: 16px;
+    }
+
+    .highlight-skill{
+        bottom:10%;
     }
 }
 
