@@ -10,9 +10,9 @@ const PYTHON = "Python is a popular programming language. Python can be used on 
 const JAVASPRING = "What is spring used for Java?The Spring Framework (Spring) is an open-source application framework that provides infrastructure support for developing Java applications. One of the most popular Java Enterprise Edition (Java EE) frameworks"
 const DOTNET = "MVC is a design pattern used to decouple user-interface (view), data (model), and application logic (controller). This pattern helps to achieve separation of concerns."
 const MYSQL = "SQL is a standard language for storing, manipulating and retrieving data in databases. Our SQL tutorial will teach you how to use SQL in: MySQL, SQL Server, MS Access, Oracle, Sybase, Informix, Postgres, and other database systems."
-const AZURE = "Microsoft Azure er en cloud computingplatform og infrastruktur, der er skabt af Microsoft. Azure kom på markedet 1. februar 2010 og understøttes bl.a. af Umbraco."
-const AWS = "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. "
-
+const CLOUD = "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. "
+const LINUX ="LINUX LINUX LINUX LINUX LINUX LINUX LINUX LINUX LINUX LINUX"
+const CPLUS ="C++C++C++C++C++C++C++C++C++C++ C++C++C++C++C++ C++C++C++C++C++ C++C++C++C++C++C++"
 export default function Skills() {
 
     const [currentHighlight, setCurrentHighlight] = useState()
@@ -39,11 +39,12 @@ export default function Skills() {
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(REACTJS)} onMouseLeave={handleShowDetails}>React.js</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(SVELTE)} onMouseLeave={handleShowDetails}>Svelte</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(PYTHON)} onMouseLeave={handleShowDetails}>Python</span>
+                    <span className="skills-item" onMouseEnter={()=>handleShowDetails(CPLUS)} onMouseLeave={handleShowDetails}>C++ & C</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(JAVASPRING)} onMouseLeave={handleShowDetails}>Java Spring</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(DOTNET)} onMouseLeave={handleShowDetails}>ASP.NET MVC</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(MYSQL)} onMouseLeave={handleShowDetails}>MySql</span>
-                    <span className="skills-item" onMouseEnter={()=>handleShowDetails(AZURE)} onMouseLeave={handleShowDetails}>Azure</span>
-                    <span className="skills-item" onMouseEnter={()=>handleShowDetails(AWS)} onMouseLeave={handleShowDetails}>AWS</span>
+                    <span className="skills-item" onMouseEnter={()=>handleShowDetails(CLOUD)} onMouseLeave={handleShowDetails}>Cloud Services</span>
+                    <span className="skills-item" onMouseEnter={()=>handleShowDetails(LINUX)} onMouseLeave={handleShowDetails}>Linux</span>
 
                     
                 </div>

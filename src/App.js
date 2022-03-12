@@ -7,6 +7,8 @@ import Skills from './pages/Skills';
 import RandomMovingDiv from './components/RandomMovingDiv';
 import $ from 'jquery';
 import Slider from './components/Slider';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth)
@@ -57,7 +59,6 @@ function App() {
 
   return (
     <div ref={appRef} className="App">
-      <Slider/>
       <NavBar setStickyPage={setStickyPage} />
       <RandomMovingDiv className={"b"} />
       <Home />
@@ -66,6 +67,8 @@ function App() {
       <About />
       <RandomMovingDiv className={"a"} />
       <Skills />
+      <Projects/>
+      <Contact/>
     </div>
   );
 }
