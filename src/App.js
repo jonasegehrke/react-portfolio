@@ -59,6 +59,7 @@ function App() {
 
   return (
     <div ref={appRef} className="App">
+      <Slider/>
       <NavBar setStickyPage={setStickyPage} />
       <RandomMovingDiv className={"b"} />
       <Home />

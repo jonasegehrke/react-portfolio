@@ -56,9 +56,8 @@ export default function About() {
                             I've always been very fond of the IT world. After my high school graduation, I started on DTU as
                             an IT-Electronic engineer student but my passion was in code so i dropped out and started on KEA
                             instead.
-                            I'm currently at my 3rd semester on KEA as a computer science student.
+                            I'm currently at my 4th semester on KEA as a computer science student.
                             Here I have learned a lot about web-services, software development and agile methodology.
-                            I have knowledge about Linux, Azure, Tomcat and much more.
                         </p>
                     </div>
                     <div className='spacer'></div>

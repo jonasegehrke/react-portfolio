@@ -1,18 +1,18 @@
 import React, { useRef, useState } from 'react'
 import NewPageHeading from '../components/NewPageHeading'
 
-const HTMLCSS = "CSS stands for Cascading Style Sheets. CSS saves a lot of work. It can control the layout of multiple web pages all at once."
-const JAVASCRIPT = "JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web. JavaScript is easy to learn."
-const NODEJS = "Node. js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind."
-const REACTJS = "React is a JavaScript library for building user interfaces. React is used to build single-page applications. React allows us to create reusable UI components."
-const SVELTE = "Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app."
-const PYTHON = "Python is a popular programming language. Python can be used on a server to create web applications."
-const JAVASPRING = "What is spring used for Java?The Spring Framework (Spring) is an open-source application framework that provides infrastructure support for developing Java applications. One of the most popular Java Enterprise Edition (Java EE) frameworks"
-const DOTNET = "MVC is a design pattern used to decouple user-interface (view), data (model), and application logic (controller). This pattern helps to achieve separation of concerns."
-const MYSQL = "SQL is a standard language for storing, manipulating and retrieving data in databases. Our SQL tutorial will teach you how to use SQL in: MySQL, SQL Server, MS Access, Oracle, Sybase, Informix, Postgres, and other database systems."
-const CLOUD = "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. "
-const LINUX ="LINUX LINUX LINUX LINUX LINUX LINUX LINUX LINUX LINUX LINUX"
-const CPLUS ="C++C++C++C++C++C++C++C++C++C++ C++C++C++C++C++ C++C++C++C++C++ C++C++C++C++C++C++"
+const HTMLCSS = "I have alot of experience with frontend HTML & CSS. I've made countless web apps and static websites as hobby projects."
+const JAVASCRIPT = "My favourite language. Frontend development in javascript has endless possibilities. I seek to learn new js frameworks as much as I can."
+const NODEJS = "Ive used Node for most of my projects. I have experience with express, react, svelte and much more."
+const REACTJS = "Currently I strive to learn reactjs. I'm coding on hobby projects everyday to expand my knowledge in react. I follow a course on pluralsight to maintain a learning process."
+const SVELTE = "Besides reactjs I'm currently learning svelte in school. I learn alot from both frameworks, that I can use to excel in both of them."
+const PYTHON = "Python is another one of my current electives in school. As I love frontend developing I have a hard time creating hobby projects in python."
+const JAVASPRING = "I have used Java Spring for creating a backend REST api with a connected SQL database. I have used JPA to access and manage data between Java object and database."
+const DOTNET = "Current elective of mine. I'm doing a full stack project this semester creating a fully functional web app called cbsStudents."
+const MYSQL = "I've gained alot of experience with MySQL. I've used local SQL databases aswell as databases from cloud services."
+const CLOUD = "I've hosted plenty of web apps, discord bots and much more on cloud services. I've gained experience with Microsoft Azure & Amazon Web Services."
+const LINUX = "Ever since I started study on DTU I've had my own Linux server to play with. I've hosted plenty of hobby projects on the server."
+const CPLUS ="I gained a bit of experience with C++ & C from my semesters at DTU. In C ive created software for my Arduino smartwatch component. In C++ I only have basic knowledge, as the teachings was never in depth."
 export default function Skills() {
 
     const [currentHighlight, setCurrentHighlight] = useState()

@@ -14,9 +14,9 @@ export default function Projects() {
                 <p>A few projects</p>
                 <div className="projects-container">
                     <Card title={"Node Notes"} text={"SSR (Server Side Rendered) web app with express. Collection of notes from elective on my education."} href={'https://github.com/jonasegehrke/Node_Mandatory_1'} icon={<FaNodeJs/>}/>
-                    <Card title={"Kviktest"} text={"(Deprecated) Static website, fetching queue times from covid test-centers in copenhagen."} href={'https://github.com/jonasegehrke/Node_Mandatory_1'} icon={<MdOutlineCoronavirus/>}/>
-                    <Card title={"Discord Bot"} text={"discord.js bot fetching stats from game 'Warzone'. Using a backend for live-stat change announcements."} href={'https://github.com/jonasegehrke/Node_Mandatory_1'} icon={<FaDiscord/>}/>
-                    <Card title={"Cinema Administration"} text={"Web app created with Java Spring & static frontend. Full CRUD for movie-screenings, ticket sales & kiosk sales."} href={'https://github.com/jonasegehrke/Node_Mandatory_1'} icon={<MdLocalMovies/>}/>
+                    <Card title={"Kviktest"} text={"(Deprecated) Static website, fetching queue times from covid test-centers in copenhagen."} href={'https://github.com/jonasegehrke/kviktest'} icon={<MdOutlineCoronavirus/>}/>
+                    <Card title={"Discord Bot"} text={"discord.js bot fetching stats from game 'Warzone'. Using a backend for live-stat change announcements."} href={'https://github.com/jonasegehrke/WarzoneStatsBot'} icon={<FaDiscord/>}/>
+                    <Card title={"Cinema Administration"} text={"Web app created with Java Spring & static frontend. Full CRUD for movie-screenings, ticket sales & kiosk sales."} href={'https://github.com/jonasegehrke/KinoXP'} icon={<MdLocalMovies/>}/>
                 </div>
             </section>
         </div>

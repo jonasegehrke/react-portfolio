@@ -1,5 +1,4 @@
 import React from 'react'
-import { BiConfused } from 'react-icons/bi'
 import { IconContext } from "react-icons";
 import { VscGithubInverted } from 'react-icons/vsc';
 
