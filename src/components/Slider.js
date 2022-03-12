@@ -38,7 +38,7 @@ export default function Slider() {
                 <div class="dot"></div>
                 <div class="dot"></div>
             </span>
-            <span ref={loadDoneRef} className='load-done hide'>&#123;&#10004;&#125;</span>
+            <span ref={loadDoneRef} className='load-done hide'>&#123;&#10003;&#125;</span>
         </div>
     )
 }
