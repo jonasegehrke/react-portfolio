@@ -1,5 +1,5 @@
 # Portfolio
-This project is in working progress
+This project is work in progress
 
 For current deployed version use this [link](https://jonasgehrke.herokuapp.com/)
 
