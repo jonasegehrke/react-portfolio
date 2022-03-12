@@ -25,8 +25,9 @@
 :root{
     --background-color:#212121!important;
     --nav-color: rgba(33, 33, 33, 0.7);
-    --color-neon-green:#0fb;
-
+    --color-neon-green:#0ff;
+    --color-neon-pink:#FF007C;
+    --color-neon-blue:#0fb;
 
     --nav-font-color: #fff;
     --primary-font-color: #fff;
@@ -203,7 +204,7 @@ body{
 .white-line{
     height: 1px;
     width: 100%;
-    background: var(--nav-font-color);
+    background: var(--color-neon-green);
     opacity: 0.5;
 }
 

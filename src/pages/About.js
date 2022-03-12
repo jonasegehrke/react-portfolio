@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { BsGithub, BsLinkedin, BsFillCloudDownloadFill } from 'react-icons/bs';
+import { BsFillCloudDownloadFill } from 'react-icons/bs';
 import { RiLinkedinBoxLine, RiLinkedinBoxFill } from 'react-icons/ri';
 import { VscGithub, VscGithubInverted } from 'react-icons/vsc';
 import { IconContext } from "react-icons";

@@ -1,6 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import { GiCheckMark } from 'react-icons/gi';
-import { IconContext } from "react-icons";
 
 export default function Slider() {
     const loadTextRef = useRef();
