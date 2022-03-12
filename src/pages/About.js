@@ -1,18 +1,41 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { BsGithub, BsLinkedin, BsFillCloudDownloadFill } from 'react-icons/bs';
+import { RiLinkedinBoxLine, RiLinkedinBoxFill } from 'react-icons/ri';
+import { VscGithub, VscGithubInverted } from 'react-icons/vsc';
 import { IconContext } from "react-icons";
+import NewPageHeading from '../components/NewPageHeading';
 
 
 export default function About() {
+    const githubLineRef = useRef()
+    const githubFillRef = useRef()
+    const linkedinLineRef = useRef();
+    const linkedinFillRef = useRef();
+
+
+    function handleHover(isGithub) {
+        if (isGithub) {
+            githubLineRef.current.classList.toggle("hide")
+            githubFillRef.current.classList.toggle("hide")
+        } else {
+            linkedinLineRef.current.classList.toggle("hide")
+            linkedinFillRef.current.classList.toggle("hide")
+        }
+
+    }
+
     return (
         <div>
-            <section className="about-section" id="about">
+            <section className="about-section">
+                <NewPageHeading heading="About me" id="about" />
                 <div className="about-container">
                     <div className='spacer'></div>
-                <div>
+                    <div>
                         <div className="about-links">
-                            <a className="social-links" href="https://github.com/jonasegehrke"><BsGithub /></a>
-                            <a className="social-links" href="https://www.linkedin.com/in/jonas-emil-gehrke/"><BsLinkedin /></a>
+                            <a className="social-links hide" href="https://github.com/jonasegehrke" ref={githubLineRef} onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(true)}><VscGithub /></a>
+                            <a className="social-links" href="https://github.com/jonasegehrke" ref={githubFillRef} onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(true)}><VscGithubInverted /></a>
+                            <a className="social-links linkedin hide" href="https://www.linkedin.com/in/jonas-emil-gehrke/" ref={linkedinLineRef} onMouseEnter={() => handleHover(false)} onMouseLeave={() => handleHover(false)}><RiLinkedinBoxLine /></a>
+                            <a className="social-links linkedin" href="https://www.linkedin.com/in/jonas-emil-gehrke/" ref={linkedinFillRef} onMouseEnter={() => handleHover(false)} onMouseLeave={() => handleHover(false)}><RiLinkedinBoxFill /></a>
                         </div>
                         <div className="about-download">
                             <a href="https://drive.google.com/file/d/1lJsX8FtAoITbxp4ayR99ltp02RNXcoqK/view?usp=sharing">
@@ -39,7 +62,7 @@ export default function About() {
                         </p>
                     </div>
                     <div className='spacer'></div>
-                    
+
                 </div>
             </section>
         </div>
