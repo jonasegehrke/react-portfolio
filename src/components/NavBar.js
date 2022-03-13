@@ -1,12 +1,27 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { BsFillPersonFill } from 'react-icons/bs';
 import { IconContext } from "react-icons";
 
 
-export default function NavBar({setStickyPage}) {
+export default function NavBar({ setStickyPage }) {
     const [isBigScreen, setIsBigScreen] = useState(true)
     const menuButtonRef = useRef()
     const navLinksRef = useRef()
+    const navBarRef = useRef();
+
+
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            navBarRef.current.classList.add('hide')
+        } else {
+            navBarRef.current.classList.remove('hide')
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
 
 
 
@@ -15,28 +30,28 @@ export default function NavBar({setStickyPage}) {
         menuButtonRef.current.classList.toggle('open');
         navLinksRef.current.classList.toggle('open');
         setStickyPage()
-        setIsBigScreen(false) 
+        setIsBigScreen(false)
     }
 
-    function handleRedirect(){
+    function handleRedirect() {
         navLinksRef.current.classList.add('close-fast')
         menuButtonRef.current.classList.toggle('open');
         navLinksRef.current.classList.toggle('open');
 
-        if(!isBigScreen) setStickyPage()
-        setTimeout(function () {     
-            navLinksRef.current.classList.remove('close-fast')          
+        if (!isBigScreen) setStickyPage()
+        setTimeout(function () {
+            navLinksRef.current.classList.remove('close-fast')
         }, 100);
-        
+
     }
 
-    
+
     return (
-        <div>
+        <div ref={navBarRef} className='nav-bar'>
             <header className="header" id="header">
                 <nav>
                     <div className="logo">
-                    <a href="#brief" className="logo-anchor"><IconContext.Provider value={{ className: "logo-icon" }}><BsFillPersonFill /></IconContext.Provider> Jonas Gehrke</a>
+                        <a href="#brief" className="logo-anchor"><IconContext.Provider value={{ className: "logo-icon" }}><BsFillPersonFill /></IconContext.Provider> Jonas Gehrke</a>
                     </div>
                     <div onClick={handleMenuOpen} ref={menuButtonRef} className="menu-btn">
                         <div className="menu-btn_burger"></div>
@@ -51,7 +66,7 @@ export default function NavBar({setStickyPage}) {
                     </ul>
                 </nav>
                 <div className='behind-white-line'>
-                <div className="white-line"></div>
+                    <div className="white-line"></div>
                 </div>
             </header>
         </div>

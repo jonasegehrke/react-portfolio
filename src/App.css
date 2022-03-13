@@ -52,6 +52,19 @@ body{
     background-color: var(--background-color);
 }
 
+.nav-bar{
+    position: fixed;
+    left: 0;      /* ADDED */
+  top: -10vh;       /* ADDED */
+  width: 100%;  /* ADDED */
+  z-index: 90;
+  transition: top 0.3s;
+}
+
+.nav-bar.hide{
+    top:0;
+}
+
 .App{
     position: relative;
 }
