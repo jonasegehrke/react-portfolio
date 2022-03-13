@@ -9,10 +9,12 @@ export default function NavBar({ setStickyPage }) {
     const navLinksRef = useRef()
     const navBarRef = useRef();
 
-
+    let scrollAllowed = true;
 
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
+        if(!scrollAllowed) return
+
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             navBarRef.current.classList.add('hide')
@@ -22,6 +24,11 @@ export default function NavBar({ setStickyPage }) {
             navBarRef.current.classList.add('show')
         }
         prevScrollpos = currentScrollPos;
+
+        scrollAllowed = false;
+        setTimeout(function(){
+            scrollAllowed = true;
+        },100)
     }
 
 
