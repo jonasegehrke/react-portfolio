@@ -209,8 +209,6 @@ body{
     opacity: 0.5;
 }
 
-
-
 .nav_links .nav-item .nav-anchor, .logo-anchor{
     transition: all 0.3s ease 0s;
     text-decoration: none;
@@ -304,9 +302,18 @@ nav{
     transform: rotate(-45deg) ;
 }
 
+@media (min-width: 767.98px) {
+
+}
+
 @media (max-width: 767.98px) {
     nav{
         position: relative;
+    }
+
+    .nav-item:hover .nav-anchor:hover,
+    .logo-anchor:hover, .logo-icon:hover{
+        color: var(--nav-font-color) !important;
     }
 
     .nav_links{

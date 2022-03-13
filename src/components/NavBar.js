@@ -9,6 +9,8 @@ export default function NavBar({setStickyPage}) {
     const navLinksRef = useRef()
 
 
+
+
     function handleMenuOpen() {
         menuButtonRef.current.classList.toggle('open');
         navLinksRef.current.classList.toggle('open');
