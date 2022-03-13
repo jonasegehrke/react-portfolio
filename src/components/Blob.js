@@ -11,7 +11,7 @@ export default function Blob() {
                 </clipPath>
             </defs>
             <image x="0" y="0" width="100%" height="100%" clipPath="url(#blob)"
-                xlinkHref={'/images/profile.JPG'} preserveAspectRatio="xMidYMid slice"></image>
+                xlinkHref={process.env.PUBLIC_URL + '/images/profile.jpg'} preserveAspectRatio="xMidYMid slice"></image>
         </svg>
 
         
