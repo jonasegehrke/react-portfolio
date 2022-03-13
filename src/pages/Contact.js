@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import NewPageHeading from '../components/NewPageHeading'
 import { GiPositionMarker } from 'react-icons/gi'
 import { GrMail } from 'react-icons/gr'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IconContext } from "react-icons";
+import { VscGithub, VscGithubInverted } from 'react-icons/vsc'
+import { RiLinkedinBoxFill, RiLinkedinBoxLine } from 'react-icons/ri'
 
 
 export default function Contact() {
+
+    const githubLineRef = useRef()
+    const githubFillRef = useRef()
+    const linkedinLineRef = useRef();
+    const linkedinFillRef = useRef();
+
+
+    function handleHover(isGithub) {
+        if (isGithub) {
+            githubLineRef.current.classList.toggle("hide")
+            githubFillRef.current.classList.toggle("hide")
+        } else {
+            linkedinLineRef.current.classList.toggle("hide")
+            linkedinFillRef.current.classList.toggle("hide")
+        }
+
+    }
 
     return (
         <div>
@@ -39,6 +58,13 @@ export default function Contact() {
                             <span className="contact-info-text">+45 53 68 07 08</span>
                         </div>
                     </div>
+
+                    <div className="about-links contact-socials">
+                            <a className="social-links hide" href="https://github.com/jonasegehrke" ref={githubLineRef} onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(true)}><VscGithub /></a>
+                            <a className="social-links" href="https://github.com/jonasegehrke" ref={githubFillRef} onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(true)}><VscGithubInverted /></a>
+                            <a className="social-links linkedin hide" href="https://www.linkedin.com/in/jonas-emil-gehrke/" ref={linkedinLineRef} onMouseEnter={() => handleHover(false)} onMouseLeave={() => handleHover(false)}><RiLinkedinBoxLine /></a>
+                            <a className="social-links linkedin" href="https://www.linkedin.com/in/jonas-emil-gehrke/" ref={linkedinFillRef} onMouseEnter={() => handleHover(false)} onMouseLeave={() => handleHover(false)}><RiLinkedinBoxFill /></a>
+                        </div>
                 </div>
             </section>
         </div>

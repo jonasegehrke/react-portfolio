@@ -3,7 +3,6 @@ import NavBar from './components/NavBar';
 import Home from './pages/Brief';
 import About from './pages/About';
 import { useRef, useEffect, useState } from 'react';
-import Skills from './pages/Skills';
 import RandomMovingDiv from './components/RandomMovingDiv';
 import $ from 'jquery';
 import Slider from './components/Slider';
