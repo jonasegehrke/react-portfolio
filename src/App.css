@@ -500,6 +500,7 @@ nav{
 
     .about-section{
         height: 100%;
+        padding-top: 5vh;
     }
 }
 
@@ -580,6 +581,7 @@ nav{
     }
     .skills-section{
         align-items: start;
+        padding-top: 5vh;
     }
 
     .skills-item{
@@ -687,6 +689,7 @@ nav{
     }
     .projects-section{
         height: 100%;
+        padding-top: 5vh;
     }
 }
 

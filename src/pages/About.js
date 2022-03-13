@@ -26,8 +26,8 @@ export default function About() {
 
     return (
         <div>
-            <section className="about-section">
-                <NewPageHeading heading="About me" id="about" />
+            <section className="about-section" id="about">
+                <NewPageHeading heading="About me" />
                 <div className="about-container">
                     <div className='spacer'></div>
                     <div>

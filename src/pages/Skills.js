@@ -30,8 +30,8 @@ export default function Skills() {
 
   return (
     <div>
-      <section className="skills-section">
-      <NewPageHeading heading="Skills" id="skills"/>
+      <section className="skills-section" id="skills">
+      <NewPageHeading heading="Skills" />
                 <div className="skills-container">
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(HTMLCSS)} onMouseLeave={handleShowDetails}>HTML & CSS</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(JAVASCRIPT)} onMouseLeave={handleShowDetails}>JavaScript</span>

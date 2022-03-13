@@ -9,8 +9,8 @@ import { MdOutlineCoronavirus, MdLocalMovies } from 'react-icons/md'
 export default function Projects() {
     return (
         <div>
-            <section className="projects-section">
-                <NewPageHeading heading="Projects" id="projects" />
+            <section className="projects-section" id="projects">
+                <NewPageHeading heading="Projects"  />
                 <p>A few projects</p>
                 <div className="projects-container">
                     <Card title={"Node Notes"} text={"SSR (Server Side Rendered) web app with express. Collection of notes from elective on my education."} href={'https://github.com/jonasegehrke/Node_Mandatory_1'} icon={<FaNodeJs/>}/>

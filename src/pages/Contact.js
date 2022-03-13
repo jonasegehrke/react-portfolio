@@ -10,8 +10,8 @@ export default function Contact() {
 
     return (
         <div>
-            <section className="contact-section">
-                <NewPageHeading heading="Contact" id="contact" />
+            <section className="contact-section" id="contact">
+                <NewPageHeading heading="Contact" />
                 <p>Reach me!</p>
                 <p className='contact-heading'>I am currently looking for an internship aswell as exciting opportunities</p>
                 <div className="contact-container">

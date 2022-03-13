@@ -17,8 +17,9 @@ export default function NavBar({ setStickyPage }) {
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         if (!scrollAllowed) return
-        if(menuOpen) return
-        
+        if (menuOpen) return
+
+
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             navBarRef.current.classList.add('show')
@@ -28,16 +29,18 @@ export default function NavBar({ setStickyPage }) {
             navBarRef.current.classList.add('hide')
         }
         prevScrollpos = currentScrollPos;
-    
+
 
         scrollAllowed = false;
+
         setTimeout(function () {
             scrollAllowed = true;
         }, 100)
     }
 
 
-      
+
+
 
 
 
@@ -49,11 +52,11 @@ export default function NavBar({ setStickyPage }) {
         navBarRef.current.classList.add('show')
         navBarRef.current.classList.remove('hide')
 
-        if(menuOpen){
+        if (menuOpen) {
             setMenuOpen(false)
-         
+
             return
-        } 
+        }
         setMenuOpen(true)
     }
 
@@ -61,6 +64,7 @@ export default function NavBar({ setStickyPage }) {
         navLinksRef.current.classList.add('close-fast')
         menuButtonRef.current.classList.toggle('open');
         navLinksRef.current.classList.toggle('open');
+        setMenuOpen(false)
 
         if (!isBigScreen) setStickyPage()
         setTimeout(function () {
