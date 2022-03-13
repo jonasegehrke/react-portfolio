@@ -687,6 +687,8 @@ nav{
     justify-content: center;
 }
 
+
+
 .contact-info{
     display: flex;
     justify-content: center;
@@ -711,6 +713,11 @@ nav{
     align-items: center;
 }
 
+@media (max-width: 767.98px) {
+    .contact-heading{
+        width: 90%;
+    }
+}
 
 
 /* Media queries */

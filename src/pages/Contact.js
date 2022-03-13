@@ -13,7 +13,7 @@ export default function Contact() {
             <section className="contact-section">
                 <NewPageHeading heading="Contact" id="contact" />
                 <p>Reach me!</p>
-                <p>I am currently looking for an internship aswell as opportunities</p>
+                <p className='contact-heading'>I am currently looking for an internship aswell as exciting opportunities</p>
                 <div className="contact-container">
                     <div className="contact-info">
 
