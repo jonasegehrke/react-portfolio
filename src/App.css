@@ -508,7 +508,7 @@ nav{
 
 .skills-item{
     transition: all .3s ease-in-out;
-    cursor: pointer;
+
     position: relative;
     flex: 0 0 20%;
     margin: 0 5px;
