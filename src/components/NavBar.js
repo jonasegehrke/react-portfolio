@@ -34,7 +34,7 @@ export default function NavBar({setStickyPage}) {
             <header className="header" id="header">
                 <nav>
                     <div className="logo">
-                    <a href="#" className="logo-anchor"><IconContext.Provider value={{ className: "logo-icon" }}><BsFillPersonFill /></IconContext.Provider> Jonas Gehrke</a>
+                    <a href="#brief" className="logo-anchor"><IconContext.Provider value={{ className: "logo-icon" }}><BsFillPersonFill /></IconContext.Provider> Jonas Gehrke</a>
                     </div>
                     <div onClick={handleMenuOpen} ref={menuButtonRef} className="menu-btn">
                         <div className="menu-btn_burger"></div>
