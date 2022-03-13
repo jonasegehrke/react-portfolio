@@ -54,15 +54,19 @@ body{
 
 .nav-bar{
     position: fixed;
-    left: 0;      /* ADDED */
-  top: -10vh;       /* ADDED */
-  width: 100%;  /* ADDED */
-  z-index: 90;
-  transition: top 0.3s;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 90;
+    transition: top 0.3s;
 }
 
 .nav-bar.hide{
     top:0;
+}
+
+.nav-bar.show{
+    top: -10vh;
 }
 
 .App{

@@ -16,8 +16,10 @@ export default function NavBar({ setStickyPage }) {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             navBarRef.current.classList.add('hide')
+            navBarRef.current.classList.remove('show')
         } else {
             navBarRef.current.classList.remove('hide')
+            navBarRef.current.classList.add('show')
         }
         prevScrollpos = currentScrollPos;
     }
