@@ -32,6 +32,7 @@ export default function Skills() {
     <div>
       <section className="skills-section" id="skills">
       <NewPageHeading heading="Skills" />
+      <p className='skills-heading'>Interract with each skill to learn more</p>
                 <div className="skills-container">
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(HTMLCSS)} onMouseLeave={handleShowDetails}>HTML & CSS</span>
                     <span className="skills-item" onMouseEnter={()=>handleShowDetails(JAVASCRIPT)} onMouseLeave={handleShowDetails}>JavaScript</span>

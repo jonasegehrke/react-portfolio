@@ -421,11 +421,11 @@ nav{
 /* About section */
 .about-section{
     position: relative;
-    height: 95vh;
+    min-height: 100vh;
     display: flex;
     text-align: center;
     flex-direction: column;
- 
+    margin-top: 5vh;
     color: var(--primary-font-color);
 }
 
@@ -437,9 +437,104 @@ nav{
 }
 
 .about-text{
-    max-width: 400px;
+    display: flex;
+    width: 700px;
+}
 
-    text-align: start;
+.about-info{
+    margin-right: 10px;
+    width: 60%;
+}
+
+.about-person{
+    margin-bottom: 10px;
+    padding: 45px 20px;
+}
+
+.about-person, .about-education, .about-skills{
+    background-color: #2b2b2b;
+    box-shadow: #2b2b2b 0 0 3px;
+    border-radius: 15px;
+   
+}
+
+.about-education{
+    padding: 45px 20px;
+}
+
+.about-skills{
+    width: 40%;
+    height: 100%;
+    padding: 30px;
+    
+}
+
+.about-icon{
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-neon-green);
+}
+
+.skill-tree{
+    text-align: left;
+}
+
+.folder{
+    color: var(--color-neon-green)!important;
+}
+
+.directory-item{
+    color: var(--primary-font-color);
+}
+
+.directory{
+    margin: 0px 10px 10px 40px; 
+    list-style: none;
+    line-height: 1.6em;
+    font-family: Arial; 
+}
+
+.directory-item{
+    font-size: 16px;
+        position: relative;
+}
+
+.directory-item::before{
+    position: absolute;
+            left: -15px;
+            top: 0px;
+            content: '';
+            display: block;
+            border-left: 1px solid #ddd;
+            height: 0.6em;
+            border-bottom: 1px solid #ddd;
+            width: 10px;
+}
+
+.directory-item::after{
+    position: absolute;
+            left: -15px;
+            bottom: -10px;
+            content: '';
+            display: block;
+            border-left: 1px solid #ddd;
+            height: 100%;
+}
+
+.root{
+    margin: 0px 0px 0px -20px;
+}
+
+.root::before{
+    display: none;
+}
+
+.root::after{
+    display: none;
+}
+
+.root:last-child::after{
+    display: none;
 }
 
 .about-links{
@@ -494,14 +589,28 @@ nav{
 }
 
 @media (max-width: 767.98px) {
-    .about-text{
-        max-width: 300px;
-    }
 
     .about-section{
         height: 100%;
         padding-top: 5vh;
     }
+
+    .about-text{
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .about-skills{
+        width: 100%;
+        margin: 30px 25px;
+    }
+    .about-info{
+        width: 100%;
+        margin: 30px 25px;
+    }
+    .about-education{
+        margin-top: 60px;
+    }
+    
 }
 
 @media (max-height: 657px) {
@@ -531,9 +640,12 @@ nav{
     justify-content: space-around;
 }
 
+.skills-heading{
+    margin-bottom: 20px;
+}
+
 .skills-item{
     transition: all .3s ease-in-out;
-
     position: relative;
     flex: 0 0 20%;
     margin: 0 5px;
@@ -560,7 +672,7 @@ nav{
     max-width: 50%;
     text-align: center;
     position: absolute;
-    bottom:50%;
+    bottom:30%;
     display: block;
     animation: fadeIn 3s;
 }
@@ -580,7 +692,6 @@ nav{
         max-width: 100%;
     }
     .skills-section{
-        align-items: start;
         padding-top: 5vh;
     }
 

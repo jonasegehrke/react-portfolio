@@ -1,7 +1,7 @@
 # Portfolio
 This project is work in progress
 
-For current deployed version use this [link](https://jonasgehrke.herokuapp.com/)
+You can visit the web app on [github pages](https://jonasegehrke.github.io/react-portfolio/)
 
 ## Getting Started with Create React App
 

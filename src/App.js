@@ -67,7 +67,6 @@ function App() {
       <RandomMovingDiv className={"d"} />
       <About />
       <RandomMovingDiv className={"a"} />
-      <Skills />
       <Projects/>
       <Contact/>
     </div>
