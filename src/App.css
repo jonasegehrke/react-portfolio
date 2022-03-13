@@ -19,7 +19,7 @@
 }
 
 .sticky{
-    position: fixed!important;
+    position: absolute!important;
 }
 
 :root{
@@ -61,11 +61,11 @@ body{
     transition: top 0.3s;
 }
 
-.nav-bar.hide{
+.nav-bar.show{
     top:0;
 }
 
-.nav-bar.show{
+.nav-bar.hide{
     top: -10vh;
 }
 
@@ -335,14 +335,15 @@ nav{
 
     .nav_links{
         position: fixed;
-        top: 5vh;
+        top: 0vh;
+        padding-top: 9vh;
         background-color: var(--background-color);
         height: 100vh;
         width: 100%;
         flex-direction: column;
         clip-path: circle(100px at 90% -15%);
         -webkit-clip-path: circle(100px at 90% -15%);
-        transition: all 0.5s ease-out;
+        transition: clip-path 0.5s ease-out, visibility 0.5s ease-out;
         pointer-events: none;
         overflow: hidden;
         visibility: hidden;
@@ -358,7 +359,6 @@ nav{
         clip-path: circle(1500px at 90% -15%);
         -webkit-clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
-
     }
 
     .logo{
