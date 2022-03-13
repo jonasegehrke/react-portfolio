@@ -57,7 +57,7 @@ export default function NavBar({ setStickyPage }) {
                         <div className="menu-btn_burger"></div>
                     </div>
                     <ul className="nav_links" ref={navLinksRef}>
-                        <li className="nav-item"><a className="nav-anchor" href="#home" onClick={handleRedirect}>Home</a></li>
+                        <li className="nav-item"><a className="nav-anchor" href="#brief" onClick={handleRedirect}>Home</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#about" onClick={handleRedirect}>About</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#skills" onClick={handleRedirect}>Skills</a></li>
                         <li className="nav-item"><a className="nav-anchor" href="#projects" onClick={handleRedirect}>Projects</a></li>
