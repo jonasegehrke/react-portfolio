@@ -471,13 +471,14 @@ nav{
     width: 40%;
     height: 100%;
     padding: 30px;
-    padding-bottom: 80px
+    padding-bottom: 80px;
+    text-align: left;
     
 }
 
 .about-icon{
     font-size: 40px;
-    text-align: center;
+    
     color: var(--color-neon-green);
 }
 
