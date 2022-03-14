@@ -8,19 +8,19 @@ import NewPageHeading from '../components/NewPageHeading';
 
 
 export default function About() {
-    const githubLineRef = useRef()
-    const githubFillRef = useRef()
-    const linkedinLineRef = useRef();
-    const linkedinFillRef = useRef();
+    const githubLineRef = useRef<null | HTMLAnchorElement>(null)
+    const githubFillRef = useRef<null | HTMLAnchorElement>(null)
+    const linkedinLineRef = useRef<null | HTMLAnchorElement>(null)
+    const linkedinFillRef = useRef<null | HTMLAnchorElement>(null)
 
 
-    function handleHover(isGithub) {
+    function handleHover(isGithub: boolean) {
         if (isGithub) {
-            githubLineRef.current.classList.toggle("hide")
-            githubFillRef.current.classList.toggle("hide")
+            githubLineRef.current?.classList.toggle("hide")
+            githubFillRef.current?.classList.toggle("hide")
         } else {
-            linkedinLineRef.current.classList.toggle("hide")
-            linkedinFillRef.current.classList.toggle("hide")
+            linkedinLineRef.current?.classList.toggle("hide")
+            linkedinFillRef.current?.classList.toggle("hide")
         }
 
     }
@@ -28,6 +28,7 @@ export default function About() {
     return (
         <div>
             <section className="about-section" id="about">
+    
                 <NewPageHeading heading="About me" />
                 <p className='about-heading'>Aspiring Web-developer</p>
                 <div className="about-container">

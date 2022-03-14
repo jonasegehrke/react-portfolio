@@ -1,8 +1,15 @@
 import React from 'react'
-import { IconContext } from "react-icons";
+import { IconContext, IconType } from "react-icons";
 import { VscGithubInverted } from 'react-icons/vsc';
 
-export default function Card({ title, text, href, icon }) {
+type CardProps = {
+    title: string,
+    text: string,
+    href: string,
+    icon: JSX.Element
+}
+
+export default function Card({title, text, href, icon}:CardProps) {
 
 
     return (

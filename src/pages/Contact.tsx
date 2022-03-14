@@ -10,19 +10,19 @@ import { RiLinkedinBoxFill, RiLinkedinBoxLine } from 'react-icons/ri'
 
 export default function Contact() {
 
-    const githubLineRef = useRef()
-    const githubFillRef = useRef()
-    const linkedinLineRef = useRef();
-    const linkedinFillRef = useRef();
+    const githubLineRef = useRef<null | HTMLAnchorElement>(null)
+    const githubFillRef = useRef<null | HTMLAnchorElement>(null)
+    const linkedinLineRef = useRef<null | HTMLAnchorElement>(null)
+    const linkedinFillRef = useRef<null | HTMLAnchorElement>(null)
 
 
-    function handleHover(isGithub) {
+    function handleHover(isGithub: boolean) {
         if (isGithub) {
-            githubLineRef.current.classList.toggle("hide")
-            githubFillRef.current.classList.toggle("hide")
+            githubLineRef.current?.classList.toggle("hide")
+            githubFillRef.current?.classList.toggle("hide")
         } else {
-            linkedinLineRef.current.classList.toggle("hide")
-            linkedinFillRef.current.classList.toggle("hide")
+            linkedinLineRef.current?.classList.toggle("hide")
+            linkedinFillRef.current?.classList.toggle("hide")
         }
 
     }

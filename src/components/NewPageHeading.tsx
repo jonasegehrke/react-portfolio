@@ -1,8 +1,12 @@
 import React from 'react'
 
-export default function NewPageHeading({heading, id}) {
+type PageProps = {
+  heading: string
+}
+
+export default function NewPageHeading({heading} : PageProps) {
   return (
-    <div className='new-page' id={id}>
+    <div className='new-page'>
       <span className="new-page-heading">{heading}</span>
       <span className="line"></span>
     </div>
