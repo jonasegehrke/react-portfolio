@@ -94,9 +94,9 @@ export default function About() {
                                             <li className='directory-item'>HTML</li>
                                             <li className='directory-item'>CSS</li>
                                             <li className='directory-item'>JavaScript</li>
+                                            <li className='directory-item'>TypeScript</li>
                                             <li className='directory-item'>Svelte</li>
                                             <li className='directory-item'>React.js</li>
-
                                         </ul>
                                     </li>
                                     <li className='directory-item folder'>backend
