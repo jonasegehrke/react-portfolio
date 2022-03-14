@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 
 export default function Slider() {
     const loadTextRef = useRef<null | HTMLSpanElement>(null);

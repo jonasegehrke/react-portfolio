@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div ref={appRef} className="App">
-      <Slider/>
+      <Slider />
       <NavBar setStickyPage={setStickyPage} />
       <RandomMovingDiv className={"b"} />
       <Home />
@@ -68,8 +68,8 @@ function App() {
       <RandomMovingDiv className={"d"} />
       <About />
       <RandomMovingDiv className={"a"} />
-      <Projects/>
-      <Contact/>
+      <Projects />
+      <Contact />
     </div>
   );
 }

@@ -1,13 +1,12 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { BsFillPersonFill } from 'react-icons/bs';
 import { IconContext } from "react-icons";
-
 
 type SetStickyPageProp = {
     setStickyPage: () => void
 }
 
-export default function NavBar( {setStickyPage } : SetStickyPageProp) { //export default function NavBar({ setStickyPage }) {
+export default function NavBar({ setStickyPage }: SetStickyPageProp) { //export default function NavBar({ setStickyPage }) {
     const [isBigScreen, setIsBigScreen] = useState(true)
     const [menuOpen, setMenuOpen] = useState(false)
     const menuButtonRef = useRef<null | HTMLDivElement>(null);
@@ -15,14 +14,11 @@ export default function NavBar( {setStickyPage } : SetStickyPageProp) { //export
     const navBarRef = useRef<null | HTMLDivElement>(null);
 
     let scrollAllowed = true;
-
-
-
     var prevScrollpos = window.pageYOffset;
+
     window.onscroll = function () {
         if (!scrollAllowed) return
         if (menuOpen) return
-
 
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
@@ -34,19 +30,12 @@ export default function NavBar( {setStickyPage } : SetStickyPageProp) { //export
         }
         prevScrollpos = currentScrollPos;
 
-
         scrollAllowed = false;
 
         setTimeout(function () {
             scrollAllowed = true;
         }, 100)
     }
-
-
-
-
-
-
 
     function handleMenuOpen() {
         menuButtonRef.current?.classList.toggle('open');
@@ -58,7 +47,6 @@ export default function NavBar( {setStickyPage } : SetStickyPageProp) { //export
 
         if (menuOpen) {
             setMenuOpen(false)
-
             return
         }
         setMenuOpen(true)
@@ -74,10 +62,7 @@ export default function NavBar( {setStickyPage } : SetStickyPageProp) { //export
         setTimeout(function () {
             navLinksRef.current?.classList.remove('close-fast')
         }, 100);
-
     }
-
-
     return (
         <div ref={navBarRef} className='nav-bar'>
             <header className="header" id="header">
@@ -103,5 +88,3 @@ export default function NavBar( {setStickyPage } : SetStickyPageProp) { //export
         </div>
     )
 }
-
-
