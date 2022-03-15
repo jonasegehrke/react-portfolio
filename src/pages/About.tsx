@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { BsFillCloudDownloadFill, BsFillPersonFill } from 'react-icons/bs';
 import { RiLinkedinBoxLine, RiLinkedinBoxFill } from 'react-icons/ri';
 import { VscGithub, VscGithubInverted } from 'react-icons/vsc';
-import { IoSchool, IoCodeSharp } from 'react-icons/io5'
+import { IoSchool } from 'react-icons/io5'
 import { IconContext } from "react-icons";
 import NewPageHeading from '../components/NewPageHeading';
 
@@ -75,9 +75,7 @@ export default function About() {
                         </div>
 
                         <div className="about-skills">
-                            <IconContext.Provider value={{ className: "about-icon" }}>
-                                <IoCodeSharp />
-                            </IconContext.Provider>
+                            
 
                             <div className="skill-tree">
                                 <ul className='directory'>
