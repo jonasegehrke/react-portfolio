@@ -4,7 +4,7 @@ import Home from './pages/Brief';
 import About from './pages/About';
 import { useRef, useEffect, useState } from 'react';
 import RandomMovingDiv from './components/RandomMovingDiv';
-import * as $ from 'jquery';
+import $ from 'jquery';
 import Slider from './components/Slider';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -32,12 +32,10 @@ function App() {
   })
 
   function makeNewPosition() {
-
-    // @ts-ignore
-    var h = $(window).height() - 50;
-    // @ts-ignore
-    var w = $(window).width() - 50;
-
+   
+    var h = window.innerHeight - 50;
+    var w = window.innerWidth - 50;
+    
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
 
@@ -45,11 +43,13 @@ function App() {
 
   }
 
-  function animateDiv(myclass: string) {
+ 
+
+  function animateDiv(className: string) {
     var newq = makeNewPosition();
-    // @ts-ignore
-    $(myclass).animate({ top: newq[0], left: newq[1] }, 10000, function () {
-      animateDiv(myclass);
+
+    $(className).animate({ top: newq[0], left: newq[1] }, 10000, function () {
+      animateDiv(className);
     });
 
   };
