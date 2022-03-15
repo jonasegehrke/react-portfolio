@@ -28,7 +28,7 @@ export default function About() {
         <div>
             <section className="about-section" id="about">
                 <NewPageHeading heading="About me" />
-                <p className='about-heading'>Aspiring Web-developer</p>
+                <p className='about-heading'>Jonas Emil Gehrke</p>
                 <div className="about-container">
                     <div className='spacer'></div>
                     <div>
@@ -55,9 +55,9 @@ export default function About() {
                                 <IconContext.Provider value={{ className: "about-icon left-margin" }}>
                                     <BsFillPersonFill />
                                 </IconContext.Provider>
-                                <p>My name is Jonas Emil Gehrke and I am currently located in Copenhagen.
-                                    I'm a hard worker with a goal of becoming better and thus gaining new skills at my workplace.
-                                    I have experience with full stack development and I've gained a passion for frontend web development.
+                                <p> Aspiring web developer with special interest in frontend JavaScript, react.js and TypeScript.
+                                    I enjoy being part of full stack projects, both frontend and backend development.
+                                    Hobby projects keep me engaged for long coding-sessions and allow me to learn a lot in my spare time. This originates from my belief in lifelong learning and exploring.
                                 </p>
                             </div>
 
@@ -66,12 +66,10 @@ export default function About() {
                                     <IoSchool />
                                 </IconContext.Provider>
                                 <p> After my high school graduation, I started on DTU as
-                                    an IT-Electronic engineer student. <br />
+                                    an IT-Electronics engineer student. <br />
                                     When I became aware that my passion was in code i withdrew from DTU and started on KEA
                                     as a Computer Science student instead.
-                                    I'm at my 4th semester on KEA learning ASP.NET MVC, Node.js and Python. <br />
-                                    Hobby projects keeps me engaged for long coding-sessions and lots of learning.
-                                    This originates from my belief in life long learning and I'm constantly exploring new technologies.
+                                    I'm at my 4th semester on KEA, currently learning ASP.NET MVC, Node.js, Svelte and Python. <br />
                                 </p>
                             </div>
                         </div>
