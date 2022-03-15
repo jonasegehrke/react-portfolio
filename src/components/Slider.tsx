@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 
 export default function Slider() {
-    const loadTextRef = useRef();
-    const loadDoneRef = useRef();
+    const loadTextRef = useRef<null | HTMLSpanElement>(null);
+    const loadDoneRef = useRef<null | HTMLSpanElement>(null);
 
     useEffect(() => {
         setTimeout(() => {
@@ -17,17 +17,17 @@ export default function Slider() {
     })
 
     function handeFadeOut() {
-        loadTextRef.current.classList.add('fading')
-        loadDoneRef.current.classList.add('fading')
+        loadTextRef.current?.classList.add('fading')
+        loadDoneRef.current?.classList.add('fading')
     }
 
     function handleLoadDone() {
-        loadDoneRef.current.classList.remove('hide')
+        loadDoneRef.current?.classList.remove('hide')
     }
 
     function handleRemoveText() {
-        loadTextRef.current.classList.add('hide')
-        loadDoneRef.current.classList.add('hide')
+        loadTextRef.current?.classList.add('hide')
+        loadDoneRef.current?.classList.add('hide')
     }
     return (
         <div className='greeting-slider'>

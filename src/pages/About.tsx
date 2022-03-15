@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { BsFillCloudDownloadFill, BsFillPersonFill } from 'react-icons/bs';
 import { RiLinkedinBoxLine, RiLinkedinBoxFill } from 'react-icons/ri';
 import { VscGithub, VscGithubInverted } from 'react-icons/vsc';
@@ -8,21 +8,20 @@ import NewPageHeading from '../components/NewPageHeading';
 
 
 export default function About() {
-    const githubLineRef = useRef()
-    const githubFillRef = useRef()
-    const linkedinLineRef = useRef();
-    const linkedinFillRef = useRef();
+    const githubLineRef = useRef<null | HTMLAnchorElement>(null)
+    const githubFillRef = useRef<null | HTMLAnchorElement>(null)
+    const linkedinLineRef = useRef<null | HTMLAnchorElement>(null)
+    const linkedinFillRef = useRef<null | HTMLAnchorElement>(null)
 
 
-    function handleHover(isGithub) {
+    function handleHover(isGithub: boolean) {
         if (isGithub) {
-            githubLineRef.current.classList.toggle("hide")
-            githubFillRef.current.classList.toggle("hide")
+            githubLineRef.current?.classList.toggle("hide")
+            githubFillRef.current?.classList.toggle("hide")
         } else {
-            linkedinLineRef.current.classList.toggle("hide")
-            linkedinFillRef.current.classList.toggle("hide")
+            linkedinLineRef.current?.classList.toggle("hide")
+            linkedinFillRef.current?.classList.toggle("hide")
         }
-
     }
 
     return (
@@ -58,7 +57,7 @@ export default function About() {
                                 </IconContext.Provider>
                                 <p>My name is Jonas Emil Gehrke and I am currently located in Copenhagen.
                                     I'm a hard worker with a goal of becoming better and thus gaining new skills at my workplace.
-                                    I have experience with full stack development and I've gained a passion for frontend web development. 
+                                    I have experience with full stack development and I've gained a passion for frontend web development.
                                 </p>
                             </div>
 
@@ -67,14 +66,13 @@ export default function About() {
                                     <IoSchool />
                                 </IconContext.Provider>
                                 <p> After my high school graduation, I started on DTU as
-                                    an IT-Electronic engineer student. <br /> 
+                                    an IT-Electronic engineer student. <br />
                                     When I became aware that my passion was in code i withdrew from DTU and started on KEA
                                     as a Computer Science student instead.
                                     I'm at my 4th semester on KEA learning ASP.NET MVC, Node.js and Python. <br />
                                     Hobby projects keeps me engaged for long coding-sessions and lots of learning.
                                     This originates from my belief in life long learning and I'm constantly exploring new technologies.
-                                    </p>
-
+                                </p>
                             </div>
                         </div>
 
@@ -83,12 +81,11 @@ export default function About() {
                                 <IoCodeSharp />
                             </IconContext.Provider>
 
-                    
                             <div className="skill-tree">
-                            
                                 <ul className='directory'>
                                     <li className='root directory-item folder'>skills
                                     </li>
+
                                     <li className='directory-item folder'>frontend
                                         <ul className='directory'>
                                             <li className='directory-item'>HTML</li>
@@ -99,6 +96,7 @@ export default function About() {
                                             <li className='directory-item'>React.js</li>
                                         </ul>
                                     </li>
+
                                     <li className='directory-item folder'>backend
                                         <ul className='directory'>
                                             <li className='directory-item'>Node.js</li>
@@ -106,6 +104,7 @@ export default function About() {
                                             <li className='directory-item'>ASP.NET MVC</li>
                                         </ul>
                                     </li>
+
                                     <li className='directory-item folder'>cloud
                                         <ul className='directory'>
                                             <li className='directory-item'>AWS</li>
@@ -124,13 +123,9 @@ export default function About() {
                                     </li>
                                 </ul>
                             </div>
-
-
                         </div>
-
                     </div>
                     <div className='spacer'></div>
-
                 </div>
             </section>
         </div>

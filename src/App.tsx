@@ -4,7 +4,7 @@ import Home from './pages/Brief';
 import About from './pages/About';
 import { useRef, useEffect, useState } from 'react';
 import RandomMovingDiv from './components/RandomMovingDiv';
-import $ from 'jquery';
+import * as $ from 'jquery';
 import Slider from './components/Slider';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -12,7 +12,7 @@ import Contact from './pages/Contact';
 function App() {
   const [width, setWidth] = useState(window.innerWidth)
 
-  const appRef = useRef();
+  const appRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
     function handleResize() {
@@ -33,8 +33,9 @@ function App() {
 
   function makeNewPosition() {
 
-    // Get viewport dimensions (remove the dimension of the div)
+    // @ts-ignore
     var h = $(window).height() - 50;
+    // @ts-ignore
     var w = $(window).width() - 50;
 
     var nh = Math.floor(Math.random() * h);
@@ -44,8 +45,9 @@ function App() {
 
   }
 
-  function animateDiv(myclass) {
+  function animateDiv(myclass: string) {
     var newq = makeNewPosition();
+    // @ts-ignore
     $(myclass).animate({ top: newq[0], left: newq[1] }, 10000, function () {
       animateDiv(myclass);
     });
@@ -53,12 +55,12 @@ function App() {
   };
 
   function setStickyPage() {
-    appRef.current.classList.toggle('sticky')
+    appRef.current?.classList.toggle('sticky')
   }
 
   return (
     <div ref={appRef} className="App">
-      <Slider/>
+      <Slider />
       <NavBar setStickyPage={setStickyPage} />
       <RandomMovingDiv className={"b"} />
       <Home />
@@ -66,8 +68,8 @@ function App() {
       <RandomMovingDiv className={"d"} />
       <About />
       <RandomMovingDiv className={"a"} />
-      <Projects/>
-      <Contact/>
+      <Projects />
+      <Contact />
     </div>
   );
 }

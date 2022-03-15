@@ -1,35 +1,34 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { BsFillPersonFill } from 'react-icons/bs';
 import { IconContext } from "react-icons";
 
+type SetStickyPageProp = {
+    setStickyPage: () => void
+}
 
-export default function NavBar({ setStickyPage }) {
+export default function NavBar({ setStickyPage }: SetStickyPageProp) { //export default function NavBar({ setStickyPage }) {
     const [isBigScreen, setIsBigScreen] = useState(true)
     const [menuOpen, setMenuOpen] = useState(false)
-    const menuButtonRef = useRef()
-    const navLinksRef = useRef()
-    const navBarRef = useRef();
+    const menuButtonRef = useRef<null | HTMLDivElement>(null);
+    const navLinksRef = useRef<null | HTMLUListElement>(null);
+    const navBarRef = useRef<null | HTMLDivElement>(null);
 
     let scrollAllowed = true;
-
-
-
     var prevScrollpos = window.pageYOffset;
+
     window.onscroll = function () {
         if (!scrollAllowed) return
         if (menuOpen) return
 
-
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            navBarRef.current.classList.add('show')
-            navBarRef.current.classList.remove('hide')
+            navBarRef.current?.classList.add('show')
+            navBarRef.current?.classList.remove('hide')
         } else {
-            navBarRef.current.classList.remove('show')
-            navBarRef.current.classList.add('hide')
+            navBarRef.current?.classList.remove('show')
+            navBarRef.current?.classList.add('hide')
         }
         prevScrollpos = currentScrollPos;
-
 
         scrollAllowed = false;
 
@@ -38,42 +37,32 @@ export default function NavBar({ setStickyPage }) {
         }, 100)
     }
 
-
-
-
-
-
-
     function handleMenuOpen() {
-        menuButtonRef.current.classList.toggle('open');
-        navLinksRef.current.classList.toggle('open');
+        menuButtonRef.current?.classList.toggle('open');
+        navLinksRef.current?.classList.toggle('open');
         setStickyPage()
         setIsBigScreen(false)
-        navBarRef.current.classList.add('show')
-        navBarRef.current.classList.remove('hide')
+        navBarRef.current?.classList.add('show')
+        navBarRef.current?.classList.remove('hide')
 
         if (menuOpen) {
             setMenuOpen(false)
-
             return
         }
         setMenuOpen(true)
     }
 
     function handleRedirect() {
-        navLinksRef.current.classList.add('close-fast')
-        menuButtonRef.current.classList.toggle('open');
-        navLinksRef.current.classList.toggle('open');
+        navLinksRef.current?.classList.add('close-fast')
+        menuButtonRef.current?.classList.toggle('open');
+        navLinksRef.current?.classList.toggle('open');
         setMenuOpen(false)
 
         if (!isBigScreen) setStickyPage()
         setTimeout(function () {
-            navLinksRef.current.classList.remove('close-fast')
+            navLinksRef.current?.classList.remove('close-fast')
         }, 100);
-
     }
-
-
     return (
         <div ref={navBarRef} className='nav-bar'>
             <header className="header" id="header">
@@ -99,5 +88,3 @@ export default function NavBar({ setStickyPage }) {
         </div>
     )
 }
-
-
