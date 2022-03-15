@@ -39,7 +39,7 @@ export default function About() {
                             <a className="social-links linkedin" href="https://www.linkedin.com/in/jonas-emil-gehrke/" ref={linkedinFillRef} onMouseEnter={() => handleHover(false)} onMouseLeave={() => handleHover(false)}><RiLinkedinBoxFill /></a>
                         </div>
                         <div className="about-download">
-                            <a href={process.env.PUBLIC_URL + '/Jonas Emil Gehrke CV.pdf'} download>
+                            <a href={process.env['PUBLIC_URL'] + '/Jonas Emil Gehrke CV.pdf'} download>
                                 <button className="download-btn btn">
                                     <IconContext.Provider value={{ className: "download-icon" }}>
                                         <BsFillCloudDownloadFill />
