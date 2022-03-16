@@ -6,7 +6,7 @@ type SetStickyPageProp = {
     setStickyPage: () => void
 }
 
-export default function NavBar({ setStickyPage }: SetStickyPageProp) { //export default function NavBar({ setStickyPage }) {
+export default function NavBar({ setStickyPage }: SetStickyPageProp) {
     const [isBigScreen, setIsBigScreen] = useState(true)
     const [menuOpen, setMenuOpen] = useState(false)
     const menuButtonRef = useRef<null | HTMLDivElement>(null);

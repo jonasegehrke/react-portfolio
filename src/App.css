@@ -593,10 +593,9 @@ nav{
 }
 
 .download-btn{
-    border: none;
     max-width: 150px;
     padding: 7px;
-    box-shadow: var(--primary-color) 0 0 2px;
+    box-shadow: var(--primary-color) 0 0 2px!important;
     border: solid var(--primary-color) 2px;
     background: var(--background-color);
     border-radius: 5px;
@@ -605,12 +604,6 @@ nav{
     cursor: pointer;
     margin-bottom: 20px;
     transition: all 0.2s ease-in;
-}
-
-.download-btn:hover{
-    background: var(--primary-color);
-    color: black;
-    box-shadow: var(--primary-color) 0 0 7px;
 }
 
 .download-icon{

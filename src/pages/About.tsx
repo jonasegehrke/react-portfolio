@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { BsFillCloudDownloadFill, BsFillPersonFill } from 'react-icons/bs';
+import { BsFillPersonFill } from 'react-icons/bs';
 import { RiLinkedinBoxLine, RiLinkedinBoxFill } from 'react-icons/ri';
 import { VscGithub, VscGithubInverted } from 'react-icons/vsc';
 import { IoSchool } from 'react-icons/io5'
@@ -13,6 +13,8 @@ export default function About() {
     const linkedinLineRef = useRef<null | HTMLAnchorElement>(null)
     const linkedinFillRef = useRef<null | HTMLAnchorElement>(null)
 
+    const downloadSelectRef = useRef<null | HTMLSelectElement>(null);
+
 
     function handleHover(isGithub: boolean) {
         if (isGithub) {
@@ -21,6 +23,15 @@ export default function About() {
         } else {
             linkedinLineRef.current?.classList.toggle("hide")
             linkedinFillRef.current?.classList.toggle("hide")
+        }
+    }
+
+    function handleDownload() {
+        let path = downloadSelectRef.current?.value
+        if (path === undefined) return;
+        window.open(process.env['PUBLIC_URL'] + path, '_blank')?.focus();
+        if(downloadSelectRef.current){
+            downloadSelectRef.current.selectedIndex = 0
         }
     }
 
@@ -39,14 +50,11 @@ export default function About() {
                             <a className="social-links linkedin" href="https://www.linkedin.com/in/jonas-emil-gehrke/" ref={linkedinFillRef} onMouseEnter={() => handleHover(false)} onMouseLeave={() => handleHover(false)}><RiLinkedinBoxFill /></a>
                         </div>
                         <div className="about-download">
-                            <a href={process.env['PUBLIC_URL'] + '/Jonas Emil Gehrke CV.pdf'} download>
-                                <button className="download-btn btn">
-                                    <IconContext.Provider value={{ className: "download-icon" }}>
-                                        <BsFillCloudDownloadFill />
-                                    </IconContext.Provider>
-                                    Download CV
-                                </button>
-                            </a>
+                            <select ref={downloadSelectRef} placeholder="Download CV" onChange={handleDownload} className="download-btn btn">
+                                <option selected disabled hidden >Download CV</option>
+                                <option value="/Jonas Emil Gehrke CV dark.pdf">Dark CV</option>
+                                <option value="/Jonas Emil Gehrke CV light.pdf" className="option">Light CV</option>
+                            </select>
                         </div>
                     </div>
                     <div className="about-text">
@@ -75,7 +83,7 @@ export default function About() {
                         </div>
 
                         <div className="about-skills">
-                            
+
 
                             <div className="skill-tree">
                                 <ul className='directory'>
