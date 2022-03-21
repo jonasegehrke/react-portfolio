@@ -1,8 +1,7 @@
 import Card from '../components/Card'
 import NewPageHeading from '../components/NewPageHeading'
 import { FaNodeJs, FaDiscord } from 'react-icons/fa'
-import { MdLocalMovies } from 'react-icons/md'
-import { BsFileEarmarkPerson } from 'react-icons/bs'
+import { BsFileEarmarkPerson, BsSpotify } from 'react-icons/bs'
 
 
 export default function Projects() {
@@ -15,7 +14,7 @@ export default function Projects() {
                     <Card title={"Node Notes"} text={"Collection of notes from elective on my education. SSR (Server Side Rendered) web app with express."} href={'https://github.com/jonasegehrke/Node_Mandatory_1'} icon={<FaNodeJs />} />
                     <Card title={"Portfolio"} text={"This is the web app you are currently on. It is one of my first large projects using react.js & TypeScript."} href={'https://github.com/jonasegehrke/react-portfolio'} icon={<BsFileEarmarkPerson />} />
                     <Card title={"Discord Bot"} text={"discord.js bot fetching stats from game 'Warzone'. Using a backend for live-stat change announcements."} href={'https://github.com/jonasegehrke/WarzoneStatsBot'} icon={<FaDiscord />} />
-                    <Card title={"Cinema Administration"} text={"Web app created with Java Spring & static frontend. Full CRUD for movie-screenings, ticket sales & kiosk sales."} href={'https://github.com/jonasegehrke/KinoXP'} icon={<MdLocalMovies />} />
+                    <Card title={"Spotify Clone"} text={"Next js Web app, created using Middleware, Spotify API, Tailwind, NextAuth & Recoil"} href={'https://github.com/jonasegehrke/spotify-clone'} icon={<BsSpotify />} />
                 </div>
             </section>
         </div>
